@@ -33,7 +33,7 @@ export const putDb = async (content) => {
   console.log('Data has been served to the database!', result);
 };
 
-// TODO: Add logic for a method that gets all the content from the database
+// Function gets all the content from the database
 export const getDb = async () => {
   console.log('GET data from the database');
 
