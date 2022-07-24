@@ -22,7 +22,7 @@ module.exports = () => {
 
       new InjectManifest({
         swSrc: './src-sw.js',
-        swDest: "src-sw.js",
+        swDest: 'src-sw.js',
       }),
 
       new WebpackPwaManifest({
@@ -57,7 +57,7 @@ module.exports = () => {
           use: {
             loader: 'babel-loader',
             options: {
-              presets: ['@babel/present-env'],
+              presets: ['@babel/preset-env'],
               plugins: ['@babel/plugin-proposal-object-rest-spread','@babel/transform-runtime'],
             },
           },
