@@ -12,9 +12,9 @@ const initdb = async () =>
     },
   });
 
-// Function will POST to the database
+// Function will PUT to the database
 export const putDb = async (content) => {
-  console.log('Add to the database');
+  console.log('Update the database');
 
   // Connection to database and version to use
   const jateDb = await openDB('jate', 1);
@@ -26,7 +26,7 @@ export const putDb = async (content) => {
   const store = tx.objectStore('jate');
 
   // Using .add() on the store and pass in the content
-  const request = store.add({ content: content });
+  const request = store.put({ content: content });
 
   // Confirm results
   const result = await request;
@@ -52,7 +52,6 @@ export const getDb = async () => {
   // Confirm request
   const result = await request;
   console.log('result.value', result);
-  return result;
 };
 
 initdb();
